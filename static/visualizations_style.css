@@ -1,0 +1,46 @@
+h1 {
+    text-align:center;
+    color: brown;
+}
+
+h2 {
+    position: absolute;
+    margin-left: 840px;
+    bottom: 350px;
+    color: brown;
+}
+
+body {
+    background-color: #d1e0e0;
+}
+
+.visual {
+    font-size: 30px;
+    margin-left: 100px;
+}
+
+.bargraph_img {
+    float: right;
+    margin-top: 100px;
+    margin-right: 150px;
+}
+
+.confusion_matrix_img {
+    float: right;
+    margin-top: 100px;
+    margin-right: 10px;
+}
+
+.piechart_img {
+    float: right;
+    margin-top: 100px;
+    margin-right: 10px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 500px;
+    border-spacing: 20px;
+
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepage_style.css') }}">
+    <title>Email Classifier</title>
+</head>
+
+
+<body>
+<h1>Email Spam Classifier</h1>
+
+<a href="/visualizations" class="visual">View Data Visualizations</a>
+
+<form method="POST">
+    <h2> Enter an email to check if spam or not</h2>
+    <input type="text" name="email_text">
+    <input type="submit" value="Submit">
+</form>
+
+{% if text %}
+    <h3>{{ text }}</h3>
+    <h4>{{ accuracy }}</h4>
+{% endif %}
+
+</body>
+
+</html>
