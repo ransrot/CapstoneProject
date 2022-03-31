@@ -3,6 +3,10 @@ import numpy as np
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
+data = model.DataModel()
+X_train, X_test, y_train, y_test = data.gen_data()
+mod = data.load_model_from_file()
+accuracy, report = data.get_accuracy_results(y_test, mod.predict(X_test))
 
 
 @app.route("/")
@@ -30,9 +34,4 @@ def visualizations_page():
 
 
 if __name__ == '__main__':
-    data = model.DataModel()
-    X_train, X_test, y_train, y_test = data.gen_data()
-    mod = data.load_model_from_file()
-    accuracy, report = data.get_accuracy_results(y_test, mod.predict(X_test))
-
     app.run(debug=True)
